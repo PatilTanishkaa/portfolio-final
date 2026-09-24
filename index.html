@@ -11,18 +11,20 @@
 
 <body>
 
-    <!-- Navbar -->
-    <nav>
-        <div class="logo">Tanishka.</div>
+  <nav>
+    <div class="logo">Tanishka.</div>
 
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+
+    <div class="nav-links" id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
 
     <!-- Hero Section -->
@@ -313,6 +315,128 @@
     </div>
 
 </section>
+
+<!-- Contact Section -->
+<section id="contact">
+
+    <div class="contact-container">
+
+        <div class="contact-heading">
+            <p class="section-label">CONTACT</p>
+
+            <h2>Let's build something together.</h2>
+
+            <p>
+                Have an opportunity, project idea or just want to connect?
+                Feel free to reach out.
+            </p>
+        </div>
+
+
+        <div class="contact-content">
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+
+                <div class="contact-item">
+                    <span>Email</span>
+
+                    <a href="mailto:tanishkapatil26oct@gmail.com">
+                        tanishkapatil26oct@gmail.com
+                    </a>
+                </div>
+
+
+                <div class="contact-item">
+                    <span>LinkedIn</span>
+
+                    <a href="https://www.linkedin.com/in/tanishkapatillnkdin/" target="_blank">
+                        LinkedIn ↗
+                    </a>
+                </div>
+
+
+                <div class="contact-item">
+                    <span>GitHub</span>
+
+                    <a href="https://github.com/PatilTanishkaa"
+                       target="_blank">
+                        github.com/PatilTanishkaa ↗
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Contact Form -->
+            <form class="contact-form">
+
+                <div class="form-group">
+
+                    <label for="name">Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Your message"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit">
+                    Send Message ↗
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+
+    <p>
+        © 2026 Tanishka Patil. Built with HTML, CSS & JavaScript.
+    </p>
+
+</footer>
 
     <script src="script.js"></script>
 
