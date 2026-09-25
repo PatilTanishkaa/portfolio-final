@@ -48,7 +48,6 @@ navItems.forEach(function (link) {
 // Active navbar link while scrolling
 
 let sections = document.querySelectorAll("section");
-let navItems = document.querySelectorAll(".nav-links a");
 
 window.addEventListener("scroll", function () {
 
@@ -57,7 +56,6 @@ window.addEventListener("scroll", function () {
     sections.forEach(function (section) {
 
         let sectionTop = section.offsetTop;
-        let sectionHeight = section.clientHeight;
 
         if (window.scrollY >= sectionTop - 150) {
             currentSection = section.getAttribute("id");
@@ -76,7 +74,6 @@ window.addEventListener("scroll", function () {
     });
 
 });
-
 //
 //This selects all your sections:
 //currentSection = "projects"
@@ -89,7 +86,11 @@ window.addEventListener("scroll", function () {
 // link.classList.add("active");
 // adds our CSS class:
 
-
-
-
+// One thing to notice
+// Your navbar currently has:
+// nav {
+//     ...
+// }
+// but it isn't fixed to the top.
+// So while scrolling, the navbar disappears.
 
