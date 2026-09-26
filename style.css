@@ -133,7 +133,7 @@ nav {
     z-index: 2;
 
     border: 8px solid white;
-
+    background-color: #f1f1f1;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -1133,7 +1133,15 @@ footer p {
 /* Mobile */
 
 @media (max-width: 650px) {
+    #scroll-top {
+        width: 40px;
+        height: 40px;
 
+        bottom: 20px;
+        right: 20px;
+
+        font-size: 18px;
+    }
     nav {
         height: 70px;
         padding: 0 20px;
@@ -1176,3 +1184,36 @@ footer p {
         font-size: 16px;
     }
 }
+
+#form-message {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Scroll to top button */
+
+#scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+    background-color: #222;
+    color: white;
+
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    transition: 0.3s;
+}
+
+#scroll-top:hover {
+    background-color: #444;
+    transform: translateY(-3px);
+}
+

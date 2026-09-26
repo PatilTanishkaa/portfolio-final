@@ -15,14 +15,12 @@ menuToggle.addEventListener("click", function () {
     } else {
         menuToggle.innerText = "☰";
     }
-
 });
 
 
 // Close menu after clicking a link
 
 let navItems = document.querySelectorAll(".nav-links a");
-
 navItems.forEach(function (link) {
 
     link.addEventListener("click", function () {
@@ -93,4 +91,81 @@ window.addEventListener("scroll", function () {
 // }
 // but it isn't fixed to the top.
 // So while scrolling, the navbar disappears.
+
+// Contact form
+
+let contactForm = document.querySelector(".contact-form");
+let formMessage = document.querySelector("#form-message");
+
+contactForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    formMessage.innerText = "Thanks! Your message has been received.";
+
+    contactForm.reset();
+
+});
+
+// Submit
+//  ↓
+// Browser reloads
+// But:event.preventDefault();
+
+
+// Scroll to top button
+
+let scrollTopButton = document.querySelector("#scroll-top");
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 500) {
+        scrollTopButton.style.display = "block";
+    } else {
+        scrollTopButton.style.display = "none";
+    }
+});
+
+scrollTopButton.addEventListener("click", function () {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
