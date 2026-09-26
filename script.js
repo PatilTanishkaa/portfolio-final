@@ -133,7 +133,14 @@ scrollTopButton.addEventListener("click", function () {
 
 });
 
+// Loading screen
+window.addEventListener("load", function () {
 
+    let loader = document.querySelector("#loader");
+
+    loader.style.display = "none";
+
+});
 
 
 
