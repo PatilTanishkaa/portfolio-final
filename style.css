@@ -1185,6 +1185,25 @@ footer p {
     }
 }
 
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .animate {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+}
+
+
+
+
+
 #form-message {
     font-size: 14px;
     color: #666;
@@ -1258,4 +1277,17 @@ footer p {
         transform: rotate(360deg);
     }
 
+}
+
+/* Scroll Animation */
+
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate.show {
+    opacity: 1;
+    transform: translateY(0);
 }

@@ -93,15 +93,38 @@ window.addEventListener("scroll", function () {
 // So while scrolling, the navbar disappears.
 
 // Contact form
+// Contact form
 
 let contactForm = document.querySelector(".contact-form");
 let formMessage = document.querySelector("#form-message");
 
-contactForm.addEventListener("submit", function (event) {
+contactForm.addEventListener("submit", async function (event) {
 
     event.preventDefault();
 
-    formMessage.innerText = "Thanks! Your message has been received.";
+    let name = contactForm.querySelector('input[type="text"]').value;
+    let email = contactForm.querySelector('input[type="email"]').value;
+    let message = contactForm.querySelector("textarea").value;
+
+    let response = await fetch("http://localhost:5000/api/contact", {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message
+        })
+
+    });
+
+    let data = await response.json();
+
+    formMessage.innerText = data.message;
 
     contactForm.reset();
 
@@ -142,6 +165,18 @@ window.addEventListener("load", function () {
 
 });
 
+// Scroll animation
+let animatedElements = document.querySelectorAll(".animate");
+let observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+animatedElements.forEach(function (element) {
+    observer.observe(element);
+});
 
 
 
