@@ -106,7 +106,7 @@ contactForm.addEventListener("submit", async function (event) {
     let email = contactForm.querySelector('input[type="email"]').value;
     let message = contactForm.querySelector("textarea").value;
 
-    let response = await fetch("http://localhost:5000/api/contact", {
+    let response = await fetch("https://tanishka-portfolio-api.onrender.com/api/contact", {
 
         method: "POST",
 
