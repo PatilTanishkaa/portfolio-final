@@ -2,24 +2,17 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
-const nodemailer = require("nodemailer");
-
+//const nodemailer = require("nodemailer"); replacesd with resend
+const { Resend } = require("resend");
 const Contact = require("./models/Contact");
 
 const app = express();
 
 // Email transporter
 
-const transporter = nodemailer.createTransport({
+// Email service
 
-    service: "gmail",
-
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-    }
-
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Middleware
 app.use(cors());
@@ -58,34 +51,68 @@ app.post("/api/contact", async function (req, res) {
         console.log("Message saved to MongoDB!");
 
         // Send email notification
-        let mailOptions = {
-            from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_USER,
-            subject: `New Portfolio Contact - ${req.body.name}`,
+   // Send email notification
 
-            text: `New message received through your portfolio.
+try {
 
-                    Name: ${req.body.name}
-                    Email: ${req.body.email}
+    await resend.emails.send({
 
-                    Message:
-                    ${req.body.message}
-                                `
+        from: "onboarding@resend.dev",
 
-        };
+        to: process.env.EMAIL_USER,
 
-        try {
+        subject: `New Portfolio Contact - ${req.body.name}`,
 
-            await transporter.sendMail(mailOptions);
+        text: `
+New message received through your portfolio.
 
-            console.log("Email notification sent!");
+Name: ${req.body.name}
+Email: ${req.body.email}
 
-        } catch (emailError) {
+Message:
+${req.body.message}
+        `
 
-            console.log("Email sending failed:", emailError);
+    });
 
-        }
+    console.log("Email notification sent!");
 
+} catch (emailError) {
+
+    console.log("Email sending failed:", emailError);
+
+}
+// Send email notification
+
+try {
+
+    await resend.emails.send({
+
+        from: "onboarding@resend.dev",
+
+        to: process.env.EMAIL_USER,
+
+        subject: `New Portfolio Contact - ${req.body.name}`,
+
+        text: `
+New message received through your portfolio.
+
+Name: ${req.body.name}
+Email: ${req.body.email}
+
+Message:
+${req.body.message}
+        `
+
+    });
+
+    console.log("Email notification sent!");
+
+} catch (emailError) {
+
+    console.log("Email sending failed:", emailError);
+
+}
         res.json({
             message: "Message received successfully!"
         });
