@@ -24,6 +24,7 @@
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
+        <a href="#achievements">Achievements</a>
         <a href="#contact">Contact</a>
     </div>
 </nav>
@@ -310,6 +311,34 @@
     </div>
 </section>
 
+<!-- Achievements Section (Homepage Preview) -->
+<section id="achievements" class="animate achievements-section">
+
+    <div class="achievements-container">
+
+        <div class="achievements-heading">
+            <p class="section-label">ACHIEVEMENTS & HIGHLIGHTS</p>
+            <h2>Milestones & recognition.</h2>
+            <p>
+                A selection of competitions, leadership roles, workshops, and key milestones.
+            </p>
+        </div>
+
+        <!-- 2-3 Featured Achievement Cards Preview -->
+        <div class="achievement-preview-grid" id="achievement-preview-grid">
+            <!-- Dynamically populated via script.js -->
+        </div>
+
+        <div class="achievements-explore-wrapper">
+            <button id="explore-achievements-btn" class="explore-achievements-btn" type="button">
+                Explore all achievements →
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
 <!-- Contact Section -->
 <section id="contact" class="animate">
 
@@ -425,6 +454,35 @@
 <button id="scroll-top" aria-label="Scroll to top">
     ↑
 </button>
+
+<!-- Full Achievement Gallery Modal -->
+<div id="achievement-modal" class="achievement-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="achievement-modal-title">
+    <div class="achievement-modal-backdrop" id="achievement-modal-backdrop"></div>
+    <div class="achievement-modal-dialog">
+        <div class="achievement-modal-header">
+            <div class="achievement-modal-header-text">
+                <p class="section-label">ACHIEVEMENTS GALLERY</p>
+                <h2 id="achievement-modal-title">All Achievements & Highlights</h2>
+            </div>
+            <button type="button" class="achievement-modal-close" id="achievement-modal-close" aria-label="Close achievements gallery">✕</button>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="achievement-filter-bar" id="achievement-filter-bar">
+            <button type="button" class="achievement-filter-btn active" data-filter="ALL">ALL</button>
+            <button type="button" class="achievement-filter-btn" data-filter="LEADERSHIP">LEADERSHIP</button>
+            <button type="button" class="achievement-filter-btn" data-filter="TECHNICAL">TECHNICAL</button>
+            <button type="button" class="achievement-filter-btn" data-filter="COMPETITIONS">COMPETITIONS</button>
+            <button type="button" class="achievement-filter-btn" data-filter="EVENTS">EVENTS</button>
+            <button type="button" class="achievement-filter-btn" data-filter="WORKSHOPS">WORKSHOPS</button>
+        </div>
+
+        <!-- Chronological Gallery by Year -->
+        <div class="achievement-gallery-body" id="achievement-gallery-body">
+            <!-- Dynamically populated via script.js -->
+        </div>
+    </div>
+</div>
 
 <!-- Footer -->
 <footer>
