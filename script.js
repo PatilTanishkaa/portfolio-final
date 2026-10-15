@@ -199,7 +199,7 @@ const achievements = [
         category: "Leadership",
         description: "PR & Marketing Head for the flagship annual technical symposium.",
         image: "images/achievements/aavishkar-2026.svg",
-        linkedin: "https://www.linkedin.com/in/tanishkapatillnkdin/",
+        linkedin: "https://lnkd.in/p/dxKEtHJq",
         featured: true
     },
     {
@@ -209,7 +209,7 @@ const achievements = [
         category: "Leadership",
         description: "Social Media & Content Lead driving developer community outreach and engagement.",
         image: "images/achievements/gdg-2026.svg",
-        linkedin: "https://www.linkedin.com/in/tanishkapatillnkdin/",
+        linkedin: "https://lnkd.in/p/dH2EQqtf",
         featured: true
     },
     {
@@ -219,7 +219,7 @@ const achievements = [
         category: "Leadership",
         description: "Vice President leading student-driven technical initiatives and department activities.",
         image: "images/achievements/itsa-vp.svg",
-        linkedin: "https://www.linkedin.com/in/tanishkapatillnkdin/",
+        linkedin: "https://lnkd.in/p/dbeXXp8V",
         featured: false
     },
     {
@@ -229,7 +229,17 @@ const achievements = [
         category: "Events",
         description: "Coordinator organizing technical competitions and student showcase events.",
         image: "images/achievements/engineers-day.svg",
-        linkedin: "https://www.linkedin.com/in/tanishkapatillnkdin/",
+        linkedin: "https://lnkd.in/p/dq7VjcYP",
+        featured: false
+    },
+    {
+        title: "Teachers' Day",
+        organization: "ZCOER IT Dept",
+        date: "2025",
+        category: "Events",
+        description: "Coordinator organizing competitions.",
+        image: "images/achievements/engineers-day.svg",
+        linkedin: "https://lnkd.in/p/dP-_WZAA",
         featured: false
     },
     {
@@ -239,23 +249,23 @@ const achievements = [
         category: "Competitions",
         description: "1st Runner-Up in the prestigious national-level entrepreneurship competition.",
         image: "images/achievements/eureka-2024.svg",
-        linkedin: "https://www.linkedin.com/in/tanishkapatillnkdin/",
+        linkedin: "https://lnkd.in/p/drPUSdfa",
         featured: true
     },
     {
-        title: "Tech Innovation Hackathon",
-        organization: "TechFest Pune",
+        title: "E-Summit Pune 2025",
+        organization: "Vishwakarma Institute Of Technology",
         date: "2024",
-        category: "Technical",
-        description: "Developed an AI-driven solution addressing community safety challenges.",
+        category: "Workshops",
+        description: "Power-packed event hosted at Vishwakarma Institute Of Technology (VIT), Pune, that brought together some of the most impactful minds in the entrepreneurial world.",
         image: "images/achievements/tech-hackathon.svg",
-        linkedin: "https://www.linkedin.com/in/tanishkapatillnkdin/",
+        linkedin: "https://lnkd.in/p/dQeUW8mp",
         featured: false
     },
     {
-        title: "Full Stack Web Workshop",
-        organization: "ITSA & Department of IT",
-        date: "2024",
+        title: "Coming Soon",
+        organization: "--",
+        date: "2026",
         category: "Workshops",
         description: "Conducted hands-on web development bootcamp for junior students.",
         image: "images/achievements/web-dev-workshop.svg",
